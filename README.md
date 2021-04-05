@@ -12,4 +12,14 @@ This could also provide a record of any issues or risks that you faced creating 
 - The project must make use of a reverse proxy to make your application accessible to the user.
 
 # Kanban Board
-The link to my kanban board can be found [here], in Trello (https://trello.com/b/247YKHp0/devops-core-practical-project)
+The link to my kanban board can be found here, in this Trello link (https://trello.com/b/247YKHp0/devops-core-practical-project)
+
+# SQL Database Layout
+
+# Microservice Architecture Layout
+
+# Risk Assessment
+
+# Test Results
+
+# References
