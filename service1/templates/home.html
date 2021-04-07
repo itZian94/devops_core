@@ -5,7 +5,14 @@
     
     <body>
         <h1>Welcome to the prize generator!</h1><br>
-        <h2>Maybe you've won something; Click below to find out!</h2>
-    
+
+        {% for key in keys %}
+            <p>{{key.value}}</p>
+        {% endfor %}
+
+        <h2>You've got your code now! Don't forget to write it down!</h2>
+        
+        <a href=result>Click here to see if you've won!</a>
+        
     </body>
 </html>
