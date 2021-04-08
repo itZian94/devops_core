@@ -1,0 +1,12 @@
+requests
+Flask
+Flask-SQLAlchemy
+SQLAlchemy
+PyMySQL
+Flask-wtf
+wtforms
+pytest
+pytest-flask
+flask-testing
+pytest-cov
+coverage
