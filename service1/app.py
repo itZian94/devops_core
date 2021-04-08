@@ -16,12 +16,12 @@ class Key(db.Model):
     value = db.Column('value', db.String(11), nullable=False)
     result = db.Column('result', db.String(80), nullable=False)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def homepage():
     keys = ""
     return render_template("home.html", keys=keys)
 
-@app.route('/result')
+@app.route('/result', methods=['GET'])
 def result():
     results = ""
     results = Key.query.all()
