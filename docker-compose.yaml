@@ -9,7 +9,7 @@ services:
           published: 5500
           protocol: tcp
         environment:
-            DATABASE_URI: ${DATABASE_URI}
+            DATABASE_URI: 'mysql+pymysql://root:root@35.246.43.74/prize_generator'
     service2:
         container_name: service2
         build: ./service2

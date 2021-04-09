@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
 import requests
+from os import getenv
 
 app=Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI']='mysql+pymysql://root:root@35.246.43.74/prize_generator'
+app.config['SQLALCHEMY_DATABASE_URI']=getenv("DATABASE_URI")
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 db=SQLAlchemy(app)
@@ -16,6 +17,7 @@ class Key(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     value = db.Column('value', db.String(11), nullable=False)
 
+
 @app.route('/', methods=['GET'])
 def homepage():
     key = ""
@@ -23,9 +25,9 @@ def homepage():
     service3_response = requests.get("http://service3:5502/randalpha")
     value = str(service2_response) + str(service3_response)
     key = Key(value=value)
-    db.session.add(result)
+    db.session.add(key)
     db.session.commit()
-    return render_template("home.html", keys=keys)
+    return render_template("home.html", key=keys)
 
 @app.route('/result', methods=['GET'])
 def result():
