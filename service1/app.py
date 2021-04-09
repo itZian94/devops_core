@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, url_for
 from flask_sqlalchemy import SQLAlchemy
+import requests
 
 app=Flask(__name__)
 
@@ -17,11 +18,10 @@ class Key(db.Model):
 
 @app.route('/', methods=['GET'])
 def homepage():
-    keys = ""
+    key = ""
     service2_response = requests.get("http://service2:5501/randint")
     service3_response = requests.get("http://service3:5502/randalpha")
-    alpha = str(service2_response)
-    value = alpha+service3_response
+    value = str(service2_response) + str(service3_response)
     key = Key(value=value)
     db.session.add(result)
     db.session.commit()
