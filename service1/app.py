@@ -14,21 +14,22 @@ db.create_all()
 class Key(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     value = db.Column('value', db.String(11), nullable=False)
-    result = db.Column('result', db.String(80), nullable=False)
 
 @app.route('/', methods=['GET'])
 def homepage():
+    keys = ""
     service2_response = requests.get("http://service2:5501/randint")
     service3_response = requests.get("http://service3:5502/randalpha")
     alpha = str(service2_response)
-    custom_key = alpha + service3_response
-    keys = "custom_key"
+    value = alpha+service3_response
+    key = Key(value=value)
+    db.session.add(result)
+    db.session.commit()
     return render_template("home.html", keys=keys)
 
 @app.route('/result', methods=['GET'])
 def result():
     results = ""
-    results = Key.query.all()
     return render_template("result.html", results=results)
 
 
