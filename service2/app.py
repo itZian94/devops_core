@@ -3,7 +3,7 @@ import random
 
 app=Flask(__name__)
 
-@app.route('/randint', methods=['GET'])
+@app.route('/randint', methods=['GET', 'POST'])
 def randintgen():
     return f'{random.randint(1,6)}'
 

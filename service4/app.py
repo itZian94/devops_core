@@ -3,7 +3,7 @@ import requests
 
 app=Flask(__name__)
 
-@app.route('/complete')
+@app.route('/complete', methods=['GET','POST'])
 def complete_result():
     service2_response = requests.get("http://service2:5501/randint")
     service3_response = requests.get("http://service3:5502/randalpha")

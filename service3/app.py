@@ -4,7 +4,7 @@ import string
 
 app=Flask(__name__)
 
-@app.route('/randalpha', methods=['GET'])
+@app.route('/randalpha', methods=['GET', 'POST'])
 def randalphagen():
     loweralpha = string.ascii_lowercase
     upperalpha = string.ascii_uppercase

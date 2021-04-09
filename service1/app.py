@@ -18,7 +18,11 @@ class Key(db.Model):
 
 @app.route('/', methods=['GET'])
 def homepage():
-    keys = ""
+    service2_response = requests.get("http://service2:5501/randint")
+    service3_response = requests.get("http://service3:5502/randalpha")
+    alpha = str(service2_response)
+    custom_key = alpha + service3_response
+    keys = "custom_key"
     return render_template("home.html", keys=keys)
 
 @app.route('/result', methods=['GET'])
