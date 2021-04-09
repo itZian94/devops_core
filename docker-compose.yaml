@@ -1,0 +1,36 @@
+version: '3.7'
+services: 
+    service1:
+        container_name: service1
+        build: ./service1
+        image: itzian94/service1:latest
+        ports:
+        - target: 5500
+          published: 5500
+          protocol: tcp
+        environment:
+            DATABASE_URI: ${DATABASE_URI}
+    service2:
+        container_name: service2
+        build: ./service2
+        image: itzian94/service2:latest
+        ports:
+        - target: 5501
+          published: 5501
+          protocol: tcp
+    service3:
+        container_name: service3
+        build: ./service3
+        image: itzian94/service3:latest
+        ports:
+        - target: 5502
+          published: 5502
+          protocol: tcp
+    service4:
+        container_name: service4
+        build: ./service4
+        image: itzian94/service4:latest
+        ports:
+        - target: 5503
+          published: 5503
+          protocol: tcp
