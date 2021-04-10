@@ -33,8 +33,10 @@ def homepage():
 
 @app.route('/result', methods=['GET'])
 def result():
-    results = ""
-    return render_template("result.html", results=results)
+    complete = ""
+    service4_response = requests.get("http://service4:5503/complete").text
+    complete = service4_response
+    return render_template("result.html", complete=complete)
 
 
 if __name__=='__main__':

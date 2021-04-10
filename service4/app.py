@@ -1,26 +1,23 @@
 from flask import Flask, Response, request, jsonify
 import requests
-
+import random
 app=Flask(__name__)
 
 @app.route('/complete', methods=['GET','POST'])
 def complete_result():
-    service2_response = requests.get("http://service2:5501/randint")
-    service3_response = requests.get("http://service3:5502/randalpha")
+    randalpha = str(requests.get("http://service3:5502/randalpha"))
 
     alphacheck = ('a', 'b', 'c')
-
-    if randomalpha.startswith(alphacheck):
-        result = int(randint) * 10 
+    complete = ""
+    rand = random.randint(1, 9)
+    if randalpha.startswith(alphacheck):
+        complete = f'{rand * 10}'
 
     else:
-        result = int(randint)
+        complete = f'{rand}'
 
-    packet = {
-        "randomalpha": randomalpha, "randint": randint, "result": result
-    }
-
-    return jsonify(packet)
+    
+    return complete
 
 if __name__=="__main__":
     app.run(host="0.0.0.0", port=5503, debug=True)
