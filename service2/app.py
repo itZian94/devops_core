@@ -1,12 +1,13 @@
 from flask import Flask, request, Response
-import random
+from random import randint
 import requests
 
 app=Flask(__name__)
 
 @app.route('/randint', methods=['GET', 'POST'])
 def randintgen():
-    return f'{random.randint(1,6)}'
+    randnum = f'{randint(100000, 999999)}'
+    return randnum
 
 
 if __name__=='__main__':

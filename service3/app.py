@@ -6,9 +6,9 @@ app=Flask(__name__)
 
 @app.route('/randalpha', methods=['GET', 'POST'])
 def randalphagen():
-    loweralpha = string.ascii_lowercase
-    upperalpha = string.ascii_uppercase
-    randomalpha = random.choice(loweralpha)
+    loweralpha = ''.join(random.sample(string.ascii_lowercase, 3))
+    upperalpha = ''.join(random.sample(string.ascii_uppercase, 2))
+    randomalpha = loweralpha
     return randomalpha
 
 if __name__=='__main__':

@@ -11,23 +11,25 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db=SQLAlchemy(app)
 
 db.drop_all()
-db.create_all()
 
-class Key(db.Model):
+class Keyword(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    value = db.Column('value', db.String(11), nullable=False)
+    value = db.Column('value', db.String(99), nullable=False)
 
+db.create_all()
 
 @app.route('/', methods=['GET'])
 def homepage():
-    key = ""
-    service2_response = requests.get("http://service2:5501/randint")
-    service3_response = requests.get("http://service3:5502/randalpha")
-    value = str(service2_response) + str(service3_response)
-    key = Key(value=value)
-    db.session.add(key)
+    keyword = ""
+    service2_response = requests.get("http://service2:5501/randint").text
+    service3_response = requests.get("http://service3:5502/randalpha").text
+    #value = str(service2_response) + str(service3_response)
+    value = service3_response + service2_response
+    keyword = Keyword(value=value)
+    db.session.add(keyword)
     db.session.commit()
-    return render_template("home.html", key=keys)
+    keywords=Keyword.query.first()
+    return render_template("home.html", keyword=keyword)
 
 @app.route('/result', methods=['GET'])
 def result():
