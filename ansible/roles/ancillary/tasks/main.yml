@@ -2,7 +2,7 @@
 # tasks file for ancillary
 - name: Join The Swarm
   become: true
-  community.docker.docker_swarm:
+  community.general.docker_swarm:
     state: join
     advertise_addr: "{{ inventory_hostname }}"
     join_token: "{{ hostvars['didact']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
