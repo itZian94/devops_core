@@ -4,3 +4,4 @@ ssh -i ~/.ssh/ansible_id_rsa jenkins@fundamental <<EOF
     export DATABASE_URI=${DATABASE_URI}
     export SECRET_KEY=${SECRET_KEY}
     docker stack deploy --compose-file ./docker-compose.yaml devops_core
+EOF
