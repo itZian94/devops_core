@@ -5,5 +5,5 @@
   community.docker.docker_swarm:
     state: join
     advertise_addr: "{{ inventory_hostname }}"
-    join_token: "{{ hostvars['fundamental']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
-    remote_addrs: [ 'fundamental:2377' ]
+    join_token: "{{ hostvars['didact']['swarm_info']['swarm_facts']['JoinTokens']['Worker'] }}"
+    remote_addrs: [ 'didact:2377' ]
