@@ -1,6 +1,6 @@
 ---
 # handlers file for nginx
-- name: Reload NGINX
+- name: reload nginx
   become: true
   service:
     name: nginx
