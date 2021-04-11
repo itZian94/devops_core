@@ -4,10 +4,10 @@ all:
   children:
     manager:
       hosts:
-        didact: didact
+        didact: 10.154.0.37
     worker:
       hosts:
-        ancillary: ancillary
+        ancillary: 10.154.0.36
   vars:
     ansible_user: jenkins
     ansible_ssh_private_key_file: "~/.ssh/id_rsa"
