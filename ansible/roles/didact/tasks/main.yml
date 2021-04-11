@@ -1,5 +1,5 @@
 ---
-# tasks file for fundamental
+# tasks file for didact
 - name: Init A New Swarm With Default Parameters
   become: true
   community.docker.docker_swarm:
