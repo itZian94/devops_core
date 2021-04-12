@@ -35,3 +35,8 @@ Service3 Test Results
 Service4 Test Results
 ![Service-test4](/images/service_test4.jpg)
 # References
+I must give  big hand to my tutors, those employed by QA as trainers, and those not; Dara, Harry, Ben, Kelvin, Jack, Eryk, Fatima, Raihan, Rob. You've all been incredibly helpful with getting my project off the ground and helping it fly.
+
+QA Community Library: https://qa-community.co.uk/~/_/learning
+Python for DevOps, O'Reilly books, Noah Gift Et Al
+W3Schools: https://www.w3schools.com/
