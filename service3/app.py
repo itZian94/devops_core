@@ -8,7 +8,7 @@ app=Flask(__name__)
 def randalphagen():
     loweralpha = ''.join(random.sample(string.ascii_lowercase, 3))
     upperalpha = ''.join(random.sample(string.ascii_uppercase, 2))
-    randomalpha = loweralpha
+    randomalpha = upperalpha
     return randomalpha
 
 if __name__=='__main__':
