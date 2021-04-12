@@ -14,12 +14,32 @@ This could also provide a record of any issues or risks that you faced creating 
 # Kanban Board
 The link to my kanban board can be found here, in this Trello link (https://trello.com/b/247YKHp0/devops-core-practical-project)
 
-# SQL Database Layout
-
 # Microservice Architecture Layout
+The Architecture for my project is divided into 4 services.
+Service 2 generates a random number, Service 3 generates a random letter, Service 4 adds the number and letter together and sends them to Service 1, which generates a prize code for the user and produces a designated amount of prize money.
+The project uses an Ansible Configuration to control and configure a Docker Swarm to deploy the services.
+
+![Architecture-diagram](/images/architecture_diagram.png)
+
+The picture below is the process by which the Pipeline deploys the services.
+![Docker-Pipeline](/images/deploy-pipeline.jpg)
 
 # Risk Assessment
-
+![Risk-Assessment](/images/risk_assessment_core.jpg)
 # Test Results
-
+Service1 Test Results
+![Service-test1](/images/service_test1.jpg)
+Service2 Test Results
+![Service-test2](/images/service_test2.jpg)
+Service3 Test Results
+![Service-test3](/images/service_test3.jpg)
+Service4 Test Results
+![Service-test4](/images/service_test4.jpg)
 # References
+I must give  big hand to my tutors, those employed by QA as trainers, and those not; Dara, Harry, Ben, Kelvin, Jack, Eryk, Fatima, Raihan, Rob. You've all been incredibly helpful with getting my project off the ground and helping it fly.
+
+QA Community Library: https://qa-community.co.uk/~/_/learning
+
+Python for DevOps, O'Reilly books, Noah Gift Et Al
+
+W3Schools: https://www.w3schools.com/
