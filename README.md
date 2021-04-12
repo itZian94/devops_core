@@ -24,11 +24,11 @@ The picture above is the process by which the Pipeline deploys the services.
 ![Risk-Assessment](/images/risk_assessment_core.jpg)
 # Test Results
 Service1 Test Results
-![Service-test1](/images/service_test1)
+![Service-test1](/images/service_test1.jpg)
 Service2 Test Results
-![Service-test2](/images/service_test2)
+![Service-test2](/images/service_test2.jpg)
 Service3 Test Results
-![Service-test3](/images/service_test3)
+![Service-test3](/images/service_test3.jpg)
 Service4 Test Results
-![Service-test4](/images/service_test4)
+![Service-test4](/images/service_test4.jpg)
 # References
