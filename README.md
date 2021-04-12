@@ -21,7 +21,14 @@ The project uses an Ansible Configuration to control and configure a Docker Swar
 ![Docker-Pipeline](/images/deploy-pipeline.jpg)
 The picture above is the process by which the Pipeline deploys the services.
 # Risk Assessment
-
+![Risk-Assessment](/images/risk_assessment_core.jpg)
 # Test Results
-
+Service1 Test Results
+![Service-test1](/images/service_test1)
+Service2 Test Results
+![Service-test2](/images/service_test2)
+Service3 Test Results
+![Service-test3](/images/service_test3)
+Service4 Test Results
+![Service-test4](/images/service_test4)
 # References
