@@ -1,6 +1,11 @@
 pipeline{
         agent any
         stages{
+            stage('Test'){
+                steps{
+                    sh 'bash testing.sh'
+                }
+            }
             stage('Build'){
                 steps{
                     sh 'docker-compose build'

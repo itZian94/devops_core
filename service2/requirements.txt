@@ -10,3 +10,4 @@ pytest-flask
 flask-testing
 pytest-cov
 coverage
+requests.mock
