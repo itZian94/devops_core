@@ -14,10 +14,10 @@ This could also provide a record of any issues or risks that you faced creating 
 # Kanban Board
 The link to my kanban board can be found here, in this Trello link (https://trello.com/b/247YKHp0/devops-core-practical-project)
 
-# SQL Database Layout
-
 # Microservice Architecture Layout
-
+The Architecture for my project is divided into 4 services.
+Service 2 generates a random number, Service 3 generates a random letter, Service 4 adds the number and letter together and sends them to Service 1, which generates a prize code for the user and produces a designated amount of prize money.
+The project uses an Ansible Configuration to control and configure a Docker Swarm to deploy the services.
 # Risk Assessment
 
 # Test Results
