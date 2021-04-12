@@ -18,6 +18,7 @@ The link to my kanban board can be found here, in this Trello link (https://trel
 The Architecture for my project is divided into 4 services.
 Service 2 generates a random number, Service 3 generates a random letter, Service 4 adds the number and letter together and sends them to Service 1, which generates a prize code for the user and produces a designated amount of prize money.
 The project uses an Ansible Configuration to control and configure a Docker Swarm to deploy the services.
+
 ![Architecture-diagram](/images/architecture_diagram.png)
 
 The picture below is the process by which the Pipeline deploys the services.
@@ -38,5 +39,7 @@ Service4 Test Results
 I must give  big hand to my tutors, those employed by QA as trainers, and those not; Dara, Harry, Ben, Kelvin, Jack, Eryk, Fatima, Raihan, Rob. You've all been incredibly helpful with getting my project off the ground and helping it fly.
 
 QA Community Library: https://qa-community.co.uk/~/_/learning
+
 Python for DevOps, O'Reilly books, Noah Gift Et Al
+
 W3Schools: https://www.w3schools.com/
