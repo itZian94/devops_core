@@ -1,4 +1,4 @@
-# DevOps Core Practical Project | Kevin was here again (once again with feeling)
+# DevOps Core Practical Project
 For this project I am building an application that runs using the microservice architecture. It generates a random series of letters and integers, and then checks the series for particular markers. If those markers are positive, then it shows the user that they have won a prize.
 
 # Project Scope
